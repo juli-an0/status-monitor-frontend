@@ -75,6 +75,24 @@ input:focus {
   border-color: #4CAF50; /* Primärfarbe Grün für den Fokus */
 }
 
+/* Status Box für "Operational" */
+.status-box.operational {
+  background-color: #4CAF50; /* Grün für Operational */
+  color: white;
+}
+
+/* Status Box für "Degraded" */
+.status-box.degraded {
+  background-color: #FFEB3B; /* Gelb für Degraded */
+  color: black;
+}
+
+/* Status Box für "Outage" */
+.status-box.outage {
+  background-color: #F44336; /* Rot für Outage */
+  color: white;
+}
+
 footer {
   margin-top: 40px;
   font-size: 14px;
