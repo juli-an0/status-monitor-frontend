@@ -11,10 +11,10 @@ async function loadStatus() {
     const data = await response.json();
 
     // Debug: Zeige die Daten in der Konsole
-    console.log(data);  // Hier siehst du das Array mit den Dienststatus
+    console.log(data);
 
     const container = document.getElementById("status-container");
-    container.innerHTML = "";
+    container.innerHTML = ""; // Container leeren, bevor neue Status angezeigt werden
 
     // Dienste aus dem Array durchgehen
     data.forEach((item) => {
@@ -22,6 +22,20 @@ async function loadStatus() {
 
       const box = document.createElement("div");
       box.className = "status-box";
+
+      // Farbliche Anpassung des Status
+      switch (status) {
+        case 'Operational':
+          box.classList.add("operational");
+          break;
+        case 'Degraded':
+          box.classList.add("degraded");
+          break;
+        case 'Outage':
+          box.classList.add("outage");
+          break;
+      }
+
       box.innerHTML = `<h3>${service}</h3><p>${status}</p>`;
       container.appendChild(box);
     });
