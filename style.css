@@ -23,7 +23,7 @@ h1 {
 .status-box {
   background-color: #E3F2FD; /* Sanftes Blau für den Status */
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;  /* Mehr Padding für bessere Lesbarkeit */
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -43,6 +43,39 @@ h1 {
 .status-box p {
   font-size: 16px;
   color: #666; /* Helleres Grau */
+}
+
+/* Status Box für "Operational" */
+.status-box.operational {
+  background-color: #4CAF50; /* Grün für Operational */
+  color: white;
+}
+
+.status-box.operational h3,
+.status-box.operational p {
+  color: white;  /* Textfarbe für besseren Kontrast */
+}
+
+/* Status Box für "Degraded" */
+.status-box.degraded {
+  background-color: #FFEB3B; /* Gelb für Degraded */
+  color: black;
+}
+
+.status-box.degraded h3,
+.status-box.degraded p {
+  color: black; /* Textfarbe für besseren Kontrast */
+}
+
+/* Status Box für "Outage" */
+.status-box.outage {
+  background-color: #F44336; /* Rot für Outage */
+  color: white;
+}
+
+.status-box.outage h3,
+.status-box.outage p {
+  color: white; /* Textfarbe für besseren Kontrast */
 }
 
 button {
@@ -73,24 +106,6 @@ input {
 
 input:focus {
   border-color: #4CAF50; /* Primärfarbe Grün für den Fokus */
-}
-
-/* Status Box für "Operational" */
-.status-box.operational {
-  background-color: #4CAF50; /* Grün für Operational */
-  color: white;
-}
-
-/* Status Box für "Degraded" */
-.status-box.degraded {
-  background-color: #FFEB3B; /* Gelb für Degraded */
-  color: black;
-}
-
-/* Status Box für "Outage" */
-.status-box.outage {
-  background-color: #F44336; /* Rot für Outage */
-  color: white;
 }
 
 footer {
