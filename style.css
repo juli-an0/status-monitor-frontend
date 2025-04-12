@@ -93,15 +93,34 @@ button:hover {
   background-color: #45A049; /* Dunkleres Grün bei Hover */
 }
 
+/* Container für Suchleiste und Button */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 input {
   padding: 10px;
   font-size: 16px;
   width: 60%;
   max-width: 400px;
-  margin-top: 20px;
+  margin-right: 10px; /* Etwas Abstand zwischen der Suchleiste und dem Button */
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: border-color 0.3s;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 input:focus {
